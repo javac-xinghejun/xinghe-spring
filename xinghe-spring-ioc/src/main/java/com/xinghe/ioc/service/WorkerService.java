@@ -14,12 +14,20 @@ import com.xinghe.ioc.dao.impl.WorkerDaoImpl;
 public class WorkerService {
 
 //    private WorkerDao workerDao = new WorkerDaoImpl();
-    private WorkerDao workerDao = new JavaWorkerDaoImpl();
+    private WorkerDao workerDao;
     /**
      * 找工作
      */
     public void findJob(){
         workerDao.findJob();
+    }
+
+    public WorkerDao getWorkerDao() {
+        return workerDao;
+    }
+
+    public void setWorkerDao(WorkerDao workerDao) {
+        this.workerDao = workerDao;
     }
 }
 
